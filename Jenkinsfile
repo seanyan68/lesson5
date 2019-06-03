@@ -7,6 +7,7 @@ node('master') {
         printMessage('Running Pipeline')
         stage("Testing") {
             sh 'ls -al'
+            sh 'echo pipeline mutil'
             sh 'python test_functions.py'
         }
         stage("Deployment") {
